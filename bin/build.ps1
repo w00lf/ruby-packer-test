@@ -5,7 +5,5 @@ Get-Content "$env:temp\vcvars.txt" | Foreach-Object {
   }
 }
 
-ruby "C:\Users\ruby-packer\ruby-packer-metanorma\bin\rubyc" "C:\Users\ruby-packer\ruby-packer-test\app.rb" -c -o "C:\Users\ruby-packer\ruby-packer-build\ruby-packer-test-app.exe" --
-nmake-args=CC=clang-cl
-ruby "C:\Users\ruby-packer\ruby-packer-metanorma\bin\rubyc" "C:\Users\ruby-packer\ruby-packer-test\app.rb" -o "C:\Users\ruby-packer\ruby-packer-build\ruby-packer-test-app.exe" --
-nmake-args=CC=clang-cl
+ruby "C:\Users\ruby-packer\ruby-packer-metanorma\bin\rubyc" "C:\Users\ruby-packer\ruby-packer-test\app.rb" -c -o "C:\Users\ruby-packer\ruby-packer-build\ruby-packer-test-app.exe" --nmake-args=CC=clang-cl
+ruby "C:\Users\ruby-packer\ruby-packer-metanorma\bin\rubyc" "C:\Users\ruby-packer\ruby-packer-test\app.rb" -o "C:\Users\ruby-packer\ruby-packer-build\ruby-packer-test-app.exe" --nmake-args=CC=clang-cl

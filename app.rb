@@ -6,6 +6,7 @@ begin
   # TODO: Fix
   $LOAD_PATH.map! { |n| 'C:' + n }
   # Something is wrong with rubygems gems lookup, workaround to load deps directly
+  $LOAD_PATH.unshift("C:/__enclose_io_memfs__/lib/ruby/2.4.0")
   FS_GEMS_DIR = "C:/__enclose_io_memfs__/lib/ruby/gems/2.4.0/gems"
   VENDOR_GEMS_DIR = "C:/__enclose_io_memfs__/local/vendor/bundle/ruby/2.4.0/gems"
   [FS_GEMS_DIR, VENDOR_GEMS_DIR].each do |folder|
@@ -22,7 +23,11 @@ begin
   puts("*" * 100)
   
   require 'bundler'
+  require 'bundler/setup'
+  puts("loaded bundler setup!")
   # Try to load byebug.so directly - does not work
+  puts(Dir.entries('C:/__enclose_io_memfs__/local/vendor/bundle/ruby/2.4.0/gems/byebug-11.0.1/lib/byebug'))
+  puts('File exists!') if File.file?('C:/__enclose_io_memfs__/local/vendor/bundle/ruby/2.4.0/gems/byebug-11.0.1/lib/byebug/byebug.so')
   require 'C:/__enclose_io_memfs__/local/vendor/bundle/ruby/2.4.0/gems/byebug-11.0.1/lib/byebug/byebug'
   require 'byebug'
   byebug
