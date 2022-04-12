@@ -2,16 +2,21 @@ GEM
   remote: https://rubygems.org/
   specs:
     byebug (11.0.1)
-    mini_portile2 (2.4.0)
-    nokogiri (1.10.7-x64-mingw32)
-      mini_portile2 (~> 2.4.0)
+    mini_portile2 (2.8.0)
+    nokogiri (1.13.4)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
+    nokogiri (1.13.4-x64-mingw32)
+      racc (~> 1.4)
+    racc (1.6.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
   byebug (~> 11.0)
-  nokogiri (~> 1.10)
+  nokogiri (~> 1.13)
 
 BUNDLED WITH
    1.16.1
